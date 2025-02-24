@@ -1,100 +1,91 @@
-# Welcome to React Router!
+# Project Title
 
-A modern, production-ready template for building full-stack React applications using React Router.
+A scalable web application built with React and TypeScript.
 
-[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/remix-run/react-router-templates/tree/main/default)
+## Table of Contents
 
-## Features
+- [Overview](#overview)
+- [Technologies](#technologies)
+- [Installation](#installation)
+- [Available Scripts](#available-scripts)
+- [Project Structure](#project-structure)
+- [Usage](#usage)
+- [License](#license)
 
-- 🚀 Server-side rendering
-- ⚡️ Hot Module Replacement (HMR)
-- 📦 Asset bundling and optimization
-- 🔄 Data loading and mutations
-- 🔒 TypeScript by default
-- 🎉 TailwindCSS for styling
-- 📖 [React Router docs](https://reactrouter.com/)
+## Overview
 
-## Getting Started
+This project is a modern web application developed using React and TypeScript, designed to control the functionalities of Resolume Arena through the provided Resolume API. The application leverages various packages and tools such as Vite for bundling, Tailwind CSS for styling, and React Router for client-side routing. The main goal is to create a maintainable and scalable codebase that makes it easy to manage and extend the control capabilities for Resolume Arena.
 
-### Installation
+## Technologies
 
-Install the dependencies:
+- **TypeScript**: v5.7.2
+- **React**: v19.0.0
+- **React DOM**: v19.0.0
+- **React Router**: v7.1.5 (and related packages)
+- **Vite**: v5.4.11
+- **Tailwind CSS**: v4.0.5
+- **Additional Packages**: `@tailwindcss/vite`, `vite-tsconfig-paths`, `isbot`, etc.
+- **Package Manager**: npm
 
-```bash
-npm install
-```
+## Installation
 
-### Development
+Before running the project, ensure you have Node.js installed.
 
-Start the development server with HMR:
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/your-username/your-repo.git
+   cd your-repo
+   ```
 
-```bash
-npm run dev
-```
+2. Install the dependencies:
+   ```bash
+   npm install
+   ```
 
-Your application will be available at `http://localhost:5173`.
+## Available Scripts
 
-## Building for Production
+In the project directory, you can run:
 
-Create a production build:
+- **Development Server**  
+  Runs the app in development mode.
+  ```bash
+  npm run dev
+  ```
 
-```bash
-npm run build
-```
+- **Build**  
+  Builds the app for production to the `dist` folder.
+  ```bash
+  npm run build
+  ```
 
-## Deployment
+- **Preview**  
+  Serves the production build locally.
+  ```bash
+  npm run preview
+  ```
 
-### Docker Deployment
+## Project Structure
 
-This template includes three Dockerfiles optimized for different package managers:
+A typical structure of the project might look like this:
 
-- `Dockerfile` - for npm
-- `Dockerfile.pnpm` - for pnpm
-- `Dockerfile.bun` - for bun
+your-repo/
+├── public/              # Static assets
+├── src/                 # Source code
+│   ├── components/      # React components
+│   ├── pages/           # Pages for routing
+│   ├── App.tsx          # Main React component
+│   ├── index.tsx        # Entry point of the application
+│   └── styles/          # Styles and Tailwind configuration
+├── package.json         # Project configuration and scripts
+├── tsconfig.json        # TypeScript configuration
+└── README.md            # This file
 
-To build and run using Docker:
+## Usage
 
-```bash
-# For npm
-docker build -t my-app .
+After installing the dependencies and starting the development server, open your browser and navigate to [http://localhost:3000](http://localhost:3000) (or the port specified by the development server). Edit the code in the `src` folder and the browser will automatically refresh with your changes.
 
-# For pnpm
-docker build -f Dockerfile.pnpm -t my-app .
+This application is intended to control various functionalities of Resolume Arena using the provided Resolume API. Customize the API endpoints and control logic as needed for your specific requirements.
 
-# For bun
-docker build -f Dockerfile.bun -t my-app .
+## License
 
-# Run the container
-docker run -p 3000:3000 my-app
-```
-
-The containerized application can be deployed to any platform that supports Docker, including:
-
-- AWS ECS
-- Google Cloud Run
-- Azure Container Apps
-- Digital Ocean App Platform
-- Fly.io
-- Railway
-
-### DIY Deployment
-
-If you're familiar with deploying Node applications, the built-in app server is production-ready.
-
-Make sure to deploy the output of `npm run build`
-
-```
-├── package.json
-├── package-lock.json (or pnpm-lock.yaml, or bun.lockb)
-├── build/
-│   ├── client/    # Static assets
-│   └── server/    # Server-side code
-```
-
-## Styling
-
-This template comes with [Tailwind CSS](https://tailwindcss.com/) already configured for a simple default starting experience. You can use whatever CSS framework you prefer.
-
----
-
-Built with ❤️ using React Router.
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
