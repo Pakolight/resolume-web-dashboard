@@ -1,15 +1,52 @@
 @import "tailwindcss";
 
-@theme {
-  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif,
-    "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-}
-
-html,
-body {
-  @apply bg-white dark:bg-gray-950;
-
-  @media (prefers-color-scheme: dark) {
-    color-scheme: dark;
+@layer base {
+  h1 {
+    @apply text-2xl;
   }
 }
+@layer components {
+  .btn-main {
+    @apply px-4 py-2 rounded-md bg-black text-white;
+  }
+  .btn-video{
+    @apply flex justify-center group-hover:border-gray-300 duration-100 relative border-1 md:border-2 group-active:bg-neutral-500
+    border-cyan-500 rounded-lg max-w-30 lg:w-20 md:h-27 lg:w-28 bg-neutral-800 py-2 mb-2
+
+    }
+  .page {
+    @apply bg-neutral-900 rounded-2xl container mx-auto p-4 xl:h-250
+    ;
+  }
+ .text-main {
+    @apply font-mono text-white;
+  }
+ .title-btn-video{
+     @apply z-3 group-hover:bg-gray-300 duration-10 group-active:bg-neutral-500 border-2 border-neutral-800 rounded-lg
+     bg-cyan-500 w-full h-1/4 flex flex-col absolute bottom-0 text-xs md:text-xs text-center
+ }
+ .bg-edit{
+        @apply absolute bg-slate-500 opacity-50 rounded-lg w-full h-[69%] md:h-25 z-3
+ }
+
+}
+/*@theme {*/
+/*    --breakpoint-*: initial;*/
+/*    --breakpoint-tablet: 40rem;*/
+/*    --breakpoint-laptop: 64rem;*/
+/*    --breakpoint-desktop: 80rem;*/
+/*}*/
+
+/*@theme {*/
+/*  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif,*/
+/*    "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";*/
+/*}*/
+
+/*html,*/
+/*body {*/
+/*  @apply bg-white dark:bg-gray-950;*/
+
+/*  @media (prefers-color-scheme: dark) {*/
+/*    color-scheme: dark;*/
+/*  }*/
+/*}*/
