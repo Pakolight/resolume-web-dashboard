@@ -74,7 +74,7 @@ export async function loadVideosPath(clipIndex: string, fileName: string) {
     const response = await fetch(url, {
         method: 'POST',
         headers: { 'Content-Type': 'text/plain' },
-        body: `file:///${BASE_DIR}/videoserver/public/videos/${fileName}`,
+        body: `file:///${BASE_DIR}/public/videos/${fileName}`,
     });
 
     if (!response.ok) {
